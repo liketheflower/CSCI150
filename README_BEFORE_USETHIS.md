@@ -10,7 +10,7 @@ COPY and PASTE materials directly from this repos will cause the 'Plagiarism' or
 http://www2.cuny.edu/about/administration/offices/legal-affairs/policies-procedures/academic-integrity-policy/
 
 
-If you not agree with this rule, please DO NOT read and use this repos.    
+If you do not agree with any part of this notice, please DO NOT read and use this repos.    
 
 # The suggested way to use this repos:  
 1. Participate the discussion session and contribute your idea related to this lecture.    
