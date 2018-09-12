@@ -1,7 +1,7 @@
-# Import notice for this repos DO NOT USE this repos if you have any disagreement. 
+# Import notice for this repos. DO NOT USE this repos if you have any disagreement. 
 
 
-This repos is created by tutors and students together used for recording the discussion process related to CSCI150. Since, it is the recording of discussion, we may have incorrect understanding for the course materials and also homeworks, so please use your own judgement when you want to use the discussion recording as your reference. 
+This repos is created by tutors and students together used for recording the discussion process related to CSCI150. Since, it is the recording of discussion, we may have incorrect understanding for the course materials and also homeworks, so please use your own judgement when you want to use this discussion recording as your reference. 
 
 Not only homeworks will be discussed during the discussion. For materials related to homework such as hints related to some specified problems, students are NOT ALLOWED to copy and paste those hints directly from this repos as their submissions for homeworks.  
 
