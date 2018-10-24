@@ -1,3 +1,5 @@
+# output 169136
+
 def two_snakes(n):
       result=0
       for head_snake1 in range(1,n+1):
