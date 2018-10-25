@@ -19,7 +19,7 @@ def vis_longest_tried_paths(longest_tried_paths, grids):
     print('tried_path', tried_path)
     plot(grids, color='#7f7f7f', size=20, alpha=0.5)
     plot(tried_path, color='#d7191c', size=50, alpha=0.95)
-    plt.savefig(str(i)+'_all.png',dpi=2000)
+    plt.savefig('./all_plots_low_resolution/'+str(i)+'_low_resolution_all.png')
     # plt.show()
     plt.close()
 
