@@ -19,8 +19,9 @@ def vis_longest_tried_paths(longest_tried_paths, grids):
     print('tried_path', tried_path)
     plot(grids, color='#7f7f7f', size=20, alpha=0.5)
     plot(tried_path, color='#d7191c', size=50, alpha=0.95)
-    plt.savefig(str(i)+'.png',dpi=2000)
-    plt.show()
+    plt.savefig(str(i)+'_all.png',dpi=2000)
+    # plt.show()
+    plt.close()
 
 def get_num_points_in_this_line(next_black_point, previous_point):
   # if the two points are in same row or col, return 5 immediately
@@ -79,6 +80,7 @@ tried_paths = []
 for start_search_point in grids:
   tried_paths += find_solution(start_search_point, grids)
 print(tried_paths)
-longest_tried_paths = [_ for _ in tried_paths if len(_)==4]
+#longest_tried_paths = [_ for _ in tried_paths if len(_)==4]
+longest_tried_paths = tried_paths
 print(longest_tried_paths)
 vis_longest_tried_paths(longest_tried_paths, grids)
