@@ -1,6 +1,6 @@
 # give each point a cooridinate(i,j)
 # traverse all the location to find the contradacted solution
-
+import matplotlib.pyplot as plt
 grids = [[i,j] for i in range(5) for j in range(5)]
 #import numpy as np
 #grids = np.zeros((5,5), dtype=np.int)
@@ -10,7 +10,17 @@ grids = [[i,j] for i in range(5) for j in range(5)]
 #    grids[row, col] = 
 #print(grids)
 
-
+def plot(grids, color='#7f7f7f', size=2, alpha=0.5):
+  x=[grid[0] for grid in grids]
+  y=[grid[1] for grid in grids]
+  plt.scatter(x,y,c=color, s=size, alpha=alpha)
+def vis_longest_tried_paths(longest_tried_paths, grids):
+  for i,tried_path in enumerate(longest_tried_paths):
+    print('tried_path', tried_path)
+    plot(grids, color='#7f7f7f', size=20, alpha=0.5)
+    plot(tried_path, color='#d7191c', size=50, alpha=0.95)
+    plt.savefig(str(i)+'.png',dpi=2000)
+    plt.show()
 
 def get_num_points_in_this_line(next_black_point, previous_point):
   # if the two points are in same row or col, return 5 immediately
@@ -36,6 +46,7 @@ def get_num_points_in_this_line(next_black_point, previous_point):
 def find_solution(start_search_point, grids):
   used_black_points = [start_search_point]
   solutions = []
+  tried_paths =[]
   open_list = []
   i, j = start_search_point
   for row in range(5):
@@ -59,7 +70,15 @@ def find_solution(start_search_point, grids):
       print('used_black_points', used_black_points)
       if len(used_black_points)>=5:
         print('solution found')
-        return 
+        solutions.append(used_black_points)
+        return solutions
+  tried_paths.append(used_black_points)
   print('solution not found')
+  return tried_paths
+tried_paths = []
 for start_search_point in grids:
-  find_solution(start_search_point, grids)
+  tried_paths += find_solution(start_search_point, grids)
+print(tried_paths)
+longest_tried_paths = [_ for _ in tried_paths if len(_)==4]
+print(longest_tried_paths)
+vis_longest_tried_paths(longest_tried_paths, grids)
